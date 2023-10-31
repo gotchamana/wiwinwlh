@@ -39,3 +39,28 @@ jobs:
         run: |
           stack install
           make html
+
+      - name: Move tutorial html
+        run: |
+          mkdir _site
+          mv tutorial.html _site/index.html
+
+      - name: Upload GitHub page
+        uses: actions/upload-pages-artifact@v2
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

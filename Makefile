@@ -1,4 +1,4 @@
-PANDOC = pandoc
+PANDOC = stack exec pandoc --
 IFORMAT = markdown+raw_tex+raw_attribute+auto_identifiers+implicit_header_references
 GHC = ghc
 

@@ -43,6 +43,7 @@ jobs:
       - name: Move tutorial html
         run: |
           mkdir _site
+          mv css img js _site/
           mv tutorial.html _site/index.html
 
       - name: Upload GitHub page

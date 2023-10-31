@@ -18,14 +18,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup
-        uses: haskell-actions/setup@v2
-        with:
-          enable-stack: true
-          stack-setup-ghc: true
-          stack-no-global: true
-
       - name: Cache ~/.stack
+        id: cache-stack
         uses: actions/cache@v3
         with:
           path: ~/.stack
@@ -40,6 +34,14 @@ jobs:
           key: ${{ runner.os }}-stack-work-${{ hashFiles('stack.yaml') }}-${{ hashFiles('*.cabal') }}-${{ hashFiles('**/*.hs') }}
           restore-keys: |
             ${{ runner.os }}-stack-work-
+
+      - name: Setup envrionment
+        if: steps.cache-stack.outputs.cache-hit != 'true'
+        uses: haskell-actions/setup@v2
+        with:
+          enable-stack: true
+          stack-setup-ghc: true
+          stack-no-global: true
 
       - name: Build
         run: |

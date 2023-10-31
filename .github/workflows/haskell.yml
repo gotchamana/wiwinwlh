@@ -35,14 +35,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-stack-work-
 
-      - name: Setup envrionment
-        if: steps.cache-stack.outputs.cache-hit != 'true'
-        uses: haskell-actions/setup@v2
-        with:
-          enable-stack: true
-          stack-setup-ghc: true
-          stack-no-global: true
-
       - name: Build
         run: |
           stack install

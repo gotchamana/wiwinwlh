@@ -1,10 +1,4 @@
-<p align="center">
-  <a href="http://dev.stephendiehl.com/hask/">
-    <img src="http://dev.stephendiehl.com/hask/img/title.png"/>
-  </a>
-</p>
-
-[![MIT License](http://img.shields.io/badge/license-mit-blue.svg)](https://github.com/sdiehl/wiwinwlh/blob/master/LICENSE)
+[![MIT License](http://img.shields.io/badge/license-mit-blue.svg)](/LICENSE)
 [![Build Status](https://travis-ci.org/sdiehl/wiwinwlh.svg?branch=master)](https://travis-ci.org/sdiehl/wiwinwlh)
 
 Read Online:

@@ -1,5 +1,5 @@
 [![MIT License](http://img.shields.io/badge/license-mit-blue.svg)](/LICENSE)
-[![Build Status](https://travis-ci.org/sdiehl/wiwinwlh.svg?branch=master)](https://travis-ci.org/sdiehl/wiwinwlh)
+[![Haskell CI](https://github.com/gotchamana/wiwinwlh/actions/workflows/haskell.yml/badge.svg)](https://github.com/gotchamana/wiwinwlh/actions/workflows/haskell.yml)
 
 Read Online:
 
